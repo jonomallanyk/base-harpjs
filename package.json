@@ -1,0 +1,8 @@
+{
+  "name": "Project Name",
+  "version": "1.0.0",
+  "description": "A brief description",
+  "dependencies": {
+    "harp": "*"
+  }
+}

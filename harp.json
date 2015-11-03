@@ -1,0 +1,7 @@
+{
+  "globals": {
+    "title": "Project Title",
+    "name"  : "Company or Project Name",
+    "uri": "http://project.com"
+  }
+}
