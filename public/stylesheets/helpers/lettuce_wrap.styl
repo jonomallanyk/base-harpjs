@@ -29,9 +29,7 @@ img
   max-width 100%
   display block
 
-
-// Flexbox grid
-// $full-bleed = 100%
+// Flexbox functions
 
 flexbox()
   display -webkit-box
@@ -55,41 +53,12 @@ align-items($align = flex-start)
   -ms-align-items $align
   align-items $align
 
-background-block($justify = flex-start, $align = flex-start)
-  flexbox()
-  flex-flow()
-  justify-content($justify)
-  align-items($align)
-  width 100%
-  margin 0 auto
-
-content-block($justify = flex-start, $align = flex-start)
-  flexbox()
-  flex-flow($align)
-  justify-content($justify)
-  align-items()
-  max-width $grid-max-width
-  margin 0 auto
-
 flex($flex)
   -webkit-box-flex $flex
   -moz-box-flex $flex
   -ms-flex $flex
   -webkit-flex $flex
   flex $flex
-
-// The columns mixin
-// col($columns, $offset = 0)
-//   flex(1 auto)
-//   padding-left $grid-gutter
-//   padding-right $grid-gutter
-//
-//   @media $tablet
-//     flex(0 (($columns / $grid-total-columns) * 100)%)
-//
-//   if $offset > 0
-//     @media $desktop
-//       margin-left ((($offset / $grid-total-columns) * 100)%) - 2.94117%
 
 col($columns, $offset = 0)
   flex(1 auto)
@@ -108,10 +77,27 @@ col($columns, $offset = 0)
 
   if $offset > 0
     @media $tablet
-      margin-left ((($offset / $grid-total-columns) * 100)%) - 2.94117%
+      margin-left ((($offset / $grid-total-columns) * 100)%)
 
     @media $desktop
-      margin-left ((($offset / $grid-total-columns) * 100)%) - 2.94117%
+      margin-left ((($offset / $grid-total-columns) * 100)%)
+
+// Block elements
+
+background-block()
+  width 100%
+  margin 0 auto
+
+content-block($justify = flex-start, $align = flex-start)
+  flexbox()
+  flex-flow($align)
+  justify-content($justify)
+  align-items()
+  max-width $grid-max-width
+  margin 0 auto
+
+.background-block
+  background-block()
 
 .content-block
   content-block()
